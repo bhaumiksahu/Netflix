@@ -1,10 +1,10 @@
 import { IMG_CDN } from "../utils/constant";
 
-const Moviecard=({poster})=>{
-    console.log(IMG_CDN+poster)
+const Moviecard=({poster,title})=>{
     return(
-        <div className="z-50">
+        <div className="w-[250px]">
             <img  src={IMG_CDN+poster} alt="" />
+            <h1 className="text-white mt-2 ml-1"> {title}</h1>
         </div>
     )
 }

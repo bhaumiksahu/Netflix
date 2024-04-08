@@ -9,7 +9,9 @@ module.exports = {
       
       'body': ['Oswald'],
   },
-  plugins: [],
+  plugins: [
+    
+  ],
 }
 }
 

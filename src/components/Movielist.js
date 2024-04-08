@@ -1,17 +1,15 @@
 import Moviecard from "./Moviecard";
 
 const Movielist=({title,movies})=>{
-     console.log(movies)
      if (!movies) {
         return <div>Loading...</div>;
       }
-     const mainmovie=movies[0];
     return(
-        <div>
-           <div>
-              <h1>{title}</h1>
-              <div>
-              {mainmovie && <Moviecard poster={mainmovie.backdrop_path} />}
+        <div className=" bg-transparent">
+           <h1 className=" ml-4 text-[1.2rem] text-white mb-2">{title}</h1>
+           <div className="ml-4 flex overflow-x-scroll">
+              <div className="flex gap-2 mb-6">
+              {movies.map((movie)=>{return(<Moviecard key={movie.id} poster={movie.backdrop_path} title={movie.title}/>)})}
               </div>
            </div>
         </div>
