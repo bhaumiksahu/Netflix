@@ -7,6 +7,6 @@ export const API_OPTIONS = {
   };
 export const IMG_CDN="https://image.tmdb.org/t/p/w500";
 export const Supp_lang=[
-  {identifier:"en",name:"English"},
-  {identifier:"hin",name:"हिंदी"},
+  {identifier:"English",name:"English"},
+  {identifier:"हिंदी",name:"हिंदी"},
 ]

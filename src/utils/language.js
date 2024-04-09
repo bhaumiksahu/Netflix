@@ -1,10 +1,10 @@
 const lang ={
-    en:{
+    English:{
      search:"what Movie do you like to watch today...",
      sign:"Sign out",
      home:"Home",
     },
-    hin:{
+    हिंदी:{
      search:"आज आप कौन सी मूवी देखना पसंद करते हैं?",
      sign:"साइन आउट",
      home:"होम ",

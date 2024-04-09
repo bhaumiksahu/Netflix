@@ -1,6 +1,9 @@
 import lang from "../utils/language";
-
+import {useSelector} from "react-redux"
 const GptSearchBar = () => {
+    const langkey=useSelector((store)=>store.config.lang);
+    console.log(lang);
+    console.log(langkey)
     return(
         <div className="">
             <div className="absolute scale-1 opacity-95">
@@ -8,9 +11,9 @@ const GptSearchBar = () => {
             </div>
             <div className=" pt-[10%] text-center ml-[22%] scale-[1]">
                <form className="flex justify-between max-w-[700px]  rounded-[5rem]  border-2 border-black">
-               <input className="w-full rounded-l-[5rem] outline-none text-lg p-4" type="text" placeholder={lang.hin.search}
+               <input className="w-full rounded-l-[5rem] outline-none text-lg p-4 bg-black text-white" type="text" placeholder={lang[langkey].search}
                />
-               <button className="text-lg text-white bg-red-600 p-4 rounded-r-[2rem]"><i class="fa-solid fa-magnifying-glass"></i></button>
+               <button className="text-lg text-white bg-red-600 p-4 rounded-r-[2rem]"><i className="fa-solid fa-magnifying-glass"></i></button>
                </form>
             </div>
         </div>
