@@ -5,16 +5,21 @@ import SecondaryContainer from "./SecondaryContainer";
 import usePopularMovies from "../hooks/usePopularMovies";
 import useTopRatedMovies from "../hooks/useTopRatedMovies";
 import useUpcoming from "../hooks/useUpcoming";
+import GptSearch from "./GptSearch";
+import {useSelector} from "react-redux"
 const Browse = () => {
+    const toggleans=useSelector((store)=>store.gpt.showGptSearch)
     useNowPlayingMovie();
     usePopularMovies();
     useTopRatedMovies();
     useUpcoming();
     return (
         <div>         
-            <Header/>   
-            <MainContainer/>
-            <SecondaryContainer/>
+            <Header/>
+            {toggleans?(<GptSearch/>)
+            :
+            (<><MainContainer/>
+            <SecondaryContainer/></>)}
         </div>
     )
 }
